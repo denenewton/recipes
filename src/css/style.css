@@ -13,85 +13,8 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #444;
-}
-
-.result-heading {
-  margin: 7rem 0;
-}
-
-.result-heading-title {
-  text-align: center;
-  font-family: inherit;
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-}
-
-.meals {
-  margin-top: 7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 2rem;
-}
-
-.meals .meal {
-  cursor: pointer;
-  position: relative;
-  width: 20rem;
-  height: 20rem;
-}
-
-.meals .meal img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.meals .meal:hover .meal-info {
-  opacity: 0.7;
-}
-
-.meal-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.meal-info h3 {
-  color: #fff;
-  font-family: inherit;
-  font-size: 1.5rem;
-  text-align: center;
-  letter-spacing: 0.17rem;
 }
 
 .header {
@@ -204,7 +127,8 @@ html {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  max-height: 200vh;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-backdrop-filter: blur(0.1rem);
           backdrop-filter: blur(0.1rem);
@@ -299,5 +223,201 @@ html {
   opacity: 1;
   -webkit-transition: opacity 0.55s ease;
   transition: opacity 0.55s ease;
+}
+
+.result-heading {
+  margin: 7rem 0;
+}
+
+.result-heading-title {
+  text-align: center;
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+.meals {
+  margin-top: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.meals .meal {
+  cursor: pointer;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+}
+
+.meals .meal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.meals .meal:hover .meal-info {
+  opacity: 0.7;
+}
+
+.meal-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.meal-info h3 {
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.17rem;
+}
+
+.single-meal {
+  width: 55vw;
+  margin: 0 auto;
+  margin-top: -4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+@media (max-width: 1440px) {
+  .single-meal {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .single-meal {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .single-meal {
+    width: 65vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .single-meal {
+    width: 80vw;
+  }
+}
+
+.single-meal .row {
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.single-meal h1 {
+  font-size: 2.5rem;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.17rem;
+}
+
+.single-meal h2 {
+  font-size: 2rem;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.17rem;
+  line-height: 1.2rem;
+}
+
+.single-meal .image-meal {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.single-meal .image-meal .image-box {
+  margin-bottom: 3.5rem;
+}
+
+.single-meal .image-meal .image-box img {
+  width: 27rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .single-meal .image-meal .image-box img {
+    width: 98%;
+  }
+}
+
+.single-meal .instructions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single-meal .instructions p {
+  font-size: 1.5rem;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.15rem;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 2rem 0 3.5rem 0;
+}
+
+.single-meal .ingredients ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.single-meal .ingredients p {
+  font-size: 1.3rem;
+  font-family: inherit;
+  letter-spacing: 0.14rem;
+  text-align: center;
+  line-height: 1.5;
 }
 /*# sourceMappingURL=style.css.map */
